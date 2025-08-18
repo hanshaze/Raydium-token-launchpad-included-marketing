@@ -1,5 +1,19 @@
-# 🚀 Raydium Token Launchpad
+# 🚀 [Raydium Token Launchpad](https://forest-launchpad-frontend.vercel.app/)
 
+<div align="center">
+  <a href="https://github.com/hanshaze/Raydium-token-launchpad-included-marketing">
+    <img src="https://img.shields.io/github/stars/hanshaze/Raydium-token-launchpad-included-marketing?style=for-the-badge&logo=github" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/hanshaze/Raydium-token-launchpad-included-marketing/fork">
+    <img src="https://img.shields.io/github/forks/hanshaze/Raydium-token-launchpad-included-marketing?style=for-the-badge&logo=github" alt="GitHub Forks">
+  </a>
+  <a href="https://github.com/hanshaze/Raydium-token-launchpad-included-marketing/issues">
+    <img src="https://img.shields.io/github/issues/hanshaze/Raydium-token-launchpad-included-marketing?style=for-the-badge&logo=github" alt="GitHub Issues">
+  </a>
+  <a href="https://github.com/hanshaze/Raydium-token-launchpad-included-marketing/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/hanshaze/Raydium-token-launchpad-included-marketing?style=for-the-badge&logo=github" alt="GitHub License">
+  </a>
+</div>
 A comprehensive, open-source token launchpad built on Solana with integrated marketing tools and liquidity management features. This project enables users to create, launch, and manage tokens on the Solana blockchain with built-in marketing capabilities.
 
 ## ✨ Features
