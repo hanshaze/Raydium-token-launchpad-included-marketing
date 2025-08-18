@@ -1,98 +1,190 @@
-# BruteSpray
+# 🚀 Raydium Token Launchpad
 
-Created by: Shane Young/@x90skysn3k && Jacob Robles/@shellfail 
+A comprehensive, open-source token launchpad built on Solana with integrated marketing tools and liquidity management features. This project enables users to create, launch, and manage tokens on the Solana blockchain with built-in marketing capabilities.
 
-Inspired by: Leon Johnson/@sho-luv
+## ✨ Features
 
-Credit to Medusa: JoMo-Kun / Foofus Networks - http://www.foofus.net
+### 🪙 Token Creation & Management
+- **Easy Token Creation**: Create new SPL tokens with customizable metadata
+- **Token Metadata**: Support for Metaplex token metadata standards
+- **IPFS Integration**: Store token metadata on decentralized storage via Pinata
 
-#### Version - 1.5.2
+### 💧 Liquidity Management
+- **Liquidity Creation**: Add liquidity to Raydium pools
+- **Liquidity Management**: Monitor and manage existing liquidity positions
+- **Pool Analytics**: Track pool performance and metrics
 
-# Demo
+### 📢 Marketing Tools
+- **Integrated Marketing**: Built-in marketing page generation for each token
+- **Social Media Ready**: Optimized sharing and promotion features
+- **Affiliate System**: Built-in affiliate marketing capabilities
 
-https://youtu.be/C-CVLbSEe_g
+### 🔐 Wallet Integration
+- **Multi-Wallet Support**: Compatible with major Solana wallets
+  - Phantom, Solflare, Sollet
+  - WalletConnect support
+  - Hardware wallet compatibility
+- **Secure Connection**: Safe wallet connection handling
 
-# Description
-BruteSpray takes nmap GNMAP/XML output and automatically brute-forces services with default credentials using Medusa. BruteSpray can even find non-standard ports by using the -sV inside Nmap.  
+## 🛠️ Technology Stack
 
-<img src="http://i.imgur.com/k9BDB5R.png" width="500">
+- **Frontend**: React 18 with Tailwind CSS
+- **Blockchain**: Solana blockchain integration
+- **Smart Contracts**: Anchor framework for Solana programs
+- **Token Standards**: SPL Token and Metaplex metadata
+- **Storage**: IPFS via Pinata for decentralized metadata storage
+- **Styling**: Material Tailwind components
+- **Routing**: React Router for navigation
 
-# Installation
+## 📋 Prerequisites
 
-```pip install -r requirements.txt```
+Before running this project, ensure you have:
 
-# Usage
-First do an nmap scan with ```-oG nmap.gnmap``` or ```-oX nmap.xml```.
+- **Node.js** (v16 or higher)
+- **npm** or **yarn** package manager
+- **Solana CLI** tools (optional, for development)
+- **Solana wallet** (Phantom, Solflare, etc.)
 
-Command: ```python brutespray.py -h```
+## 🚀 Installation
 
-Command: ```python brutespray.py --file nmap.gnmap```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/hanshaze/Raydium-token-launchpad-included-marketing.git
+   cd Raydium-token-launchpad-included-marketing
+   ```
 
-Command: ```python brutesrpay.py --file nmap.xml```
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   npm install --legacy-peer-deps
+   # or
+   yarn install
+   ```
 
-Command: ```python brutespray.py --file nmap.xml -i```
+3. **Environment Setup**
+   Create a `.env` file in the root directory:
+   ```env
+   REACT_APP_SOLANA_NETWORK=devnet
+   REACT_APP_PINATA_API_KEY=your_pinata_api_key
+   REACT_APP_PINATA_SECRET_KEY=your_pinata_secret_key
+   ```
 
-<img src="https://i.imgur.com/25rfMAB.png" width="450">
+4. **Start the development server**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-## Examples
+The application will open at `http://localhost:3000`
 
-#### Using Custom Wordlists:
+## 🏗️ Project Structure
 
-```python brutespray.py --file nmap.gnmap -U /usr/share/wordlist/user.txt -P /usr/share/wordlist/pass.txt --threads 5 --hosts 5```
+```
+src/
+├── pages/                 # Main application pages
+│   ├── CreateToken.js     # Token creation interface
+│   ├── CreateLiquidity.js # Liquidity creation
+│   ├── ManageLiquidity.js # Liquidity management
+│   ├── Marketing.js       # Marketing tools
+│   ├── Affiliate.js       # Affiliate system
+│   ├── Header.js          # Navigation header
+│   └── Footer.js          # Application footer
+├── providers/             # React context providers
+│   ├── WalletProvider.js  # Wallet connection provider
+│   └── WalletButton.js    # Wallet connection button
+├── web3/                  # Blockchain integration
+│   ├── config.js          # Solana configuration
+│   ├── connection.js      # Solana connection setup
+│   ├── token.js           # Token operations
+│   └── marketing.js       # Marketing operations
+└── utils/                 # Utility functions
+    ├── pinata.js          # IPFS integration
+    └── validation.js      # Input validation
+```
 
-#### Brute-Forcing Specific Services:
+## 📱 Usage
 
-```python brutespray.py --file nmap.gnmap --service ftp,ssh,telnet --threads 5 --hosts 5```
+### Creating a Token
+1. Navigate to the home page
+2. Fill in token details (name, symbol, supply, etc.)
+3. Upload token logo/icon
+4. Configure metadata and description
+5. Deploy the token to Solana
 
-#### Specific Credentials:
-   
-```python brutespray.py --file nmap.gnmap -u admin -p password --threads 5 --hosts 5```
+### Adding Liquidity
+1. Go to "Create Liquidity" page
+2. Select your token and SOL
+3. Set liquidity amounts
+4. Confirm the transaction
 
-#### Continue After Success:
+### Marketing Your Token
+1. Access the "Marketing" page
+2. Customize your token's marketing page
+3. Share the generated marketing URL
+4. Utilize affiliate links for promotion
 
-```python brutespray.py --file nmap.gnmap --threads 5 --hosts 5 -c```
+## 🔧 Configuration
 
-#### Use Nmap XML Output
+### Solana Network
+The application can be configured to work with different Solana networks:
+- **Devnet**: For testing and development
+- **Mainnet**: For production use
 
-```python brutespray.py --file nmap.xml --threads 5 --hosts 5```
+Update the network configuration in `src/web3/config.js`:
 
-#### Interactive Mode
+```javascript
+export const SOLANA_NETWORK = process.env.REACT_APP_SOLANA_NETWORK || 'devnet';
+```
 
-```python brutespray.py --file nmap.xml -i```
+### Pinata Configuration
+For IPFS metadata storage, configure your Pinata API keys in the environment variables.
 
-<img src="https://i.imgur.com/zBXEU33.png" width="600">
+## 🧪 Testing
 
-# Supported Services
+Run the test suite:
+```bash
+npm test
+# or
+yarn test
+```
 
-* ssh
-* ftp
-* telnet
-* vnc
-* mssql
-* mysql
-* postgresql
-* rsh
-* imap
-* nntp
-* pcanywhere
-* pop3
-* rexec
-* rlogin
-* smbnt
-* smtp
-* svn
-* vmauthd
+## 🏗️ Building for Production
 
-# Changelog
-* v1.5.2
-    * change tmp and output directory behavior
-* v1.5.1
-    * added check for no services
-* v1.5
-    * added interactive mode
-* v1.4
-    * added ability to use nmap XML 
-* v1.3
-    * added the ability to stop on success
-    * added the ability to reference custom userlists and passlists
-    * added the ability to specify specific users & passwords
+Create a production build:
+```bash
+npm run build
+# or
+yarn build
+```
+
+## 🙏 Acknowledgments
+
+- **Solana Labs** for the Solana blockchain
+- **Raydium** for the AMM protocol
+- **Metaplex** for token metadata standards
+- **Anchor** for the Solana development framework
+- **Pinata** for IPFS storage services
+
+## 📞 Support
+- **Telegram**: [@hanshaze007](https://t.me/hanshaze007)
+
+## 🔮 Roadmap
+
+- [ ] Enhanced analytics dashboard
+- [ ] Multi-chain support
+- [ ] Advanced marketing tools
+- [ ] Mobile application
+- [ ] DeFi integration features
+- [ ] Community governance tools
+
+---
+
+**⭐ Star this repository if you find it helpful!**
+
+**🔄 Keep updated with the latest releases and features.**
+
+---
+
+*Built with ❤️ for the Solana ecosystem*
