@@ -16,6 +16,17 @@
 </div>
 A comprehensive, open-source token launchpad built on Solana with integrated marketing tools and liquidity management features. This project enables users to create, launch, and manage tokens on the Solana blockchain with built-in marketing capabilities.
 
+## 🖼️ Screenshots
+
+<div align="center">
+  <img src="/public/screenshot1.png" alt="Launchpad 1" width="700" />
+  <br/><em>Launchpad Home</em>
+  <br/><br/>
+  <img src="/public/screenshot2.png" alt="Launchpad 2" width="700" />
+  <br/><em>Token Creation Page</em>
+</div>
+
+
 ## ✨ Features
 
 ### 🪙 Token Creation & Management
