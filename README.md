@@ -23,7 +23,7 @@ A comprehensive, open-source token launchpad built on Solana with integrated mar
   <br/><em>Launchpad Home</em>
   <br/><br/>
   <img src="/public/screenshot2.png" alt="Launchpad 2" width="700" />
-  <br/><em>Token Creation Page</em>
+  <br/><em>Launchpad Home</em>
 </div>
 
 
